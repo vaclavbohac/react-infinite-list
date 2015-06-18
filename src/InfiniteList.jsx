@@ -1,17 +1,7 @@
 import React from 'react';
 
-class InfiniteListItem extends React.Component {
-    render() {
-        return (
-            <div className="infinite-list-item">{this.props.title}</div>
-        );
-    }
-}
-
-InfiniteListItem.propTypes = {
-    height: React.PropTypes.number.isRequired,
-    title:  React.PropTypes.string.isRequired
-};
+import { guidFor } from './utils/guid';
+import InfiniteListItem from './InfiniteListItem.jsx';
 
 var isWebkit = /WebKit/.test(navigator && navigator.userAgent || '');
 
